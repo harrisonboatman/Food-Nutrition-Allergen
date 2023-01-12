@@ -1,0 +1,17 @@
+.container {
+}
+
+
+
+
+
+.phedmebox {
+    margin:  150px  300px 20px;
+    width: 500px;
+    border: 3px solid cadetblue;
+    flex: 1 0 200px;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+
+}
