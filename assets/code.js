@@ -1,3 +1,7 @@
+$(document).ready(function(){
+    $('select').formSelect();
+  });
+
 var submitBtn = document.querySelector("#submitBtn")
 
 function handleFormSubmit () {
@@ -28,3 +32,5 @@ var repiceURL = ""
     })
 
 submitBtn.addEventListener('click', handleFormSubmit);
+
+// Attempt to add checkbox
