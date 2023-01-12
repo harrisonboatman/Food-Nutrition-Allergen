@@ -1,3 +1,8 @@
+$(document).ready(function(){
+    $('select').formSelect();
+  });
+
+  
 var submitBtn = document.querySelector("#submitBtn")
 const options = {
 	method: 'GET',
