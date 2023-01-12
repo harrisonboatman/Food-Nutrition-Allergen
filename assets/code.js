@@ -6,10 +6,10 @@ function handleFormSubmit () {
     console.log(searchEl);
     console.log(allergenEl);
 
-    getRecipes(searchEl);
+    getRecipes(searchEl, allergenEl);
 }
 
-function getRecipes (recipe);
+function getRecipes (recipe, allergen);
 var repiceURL = ""
 
     fetch(recipeURL)
@@ -24,7 +24,7 @@ var repiceURL = ""
     })
     .then(function(recResult){
         console.log(recResult);
-        
+
     })
 
 submitBtn.addEventListener('click', handleFormSubmit);
