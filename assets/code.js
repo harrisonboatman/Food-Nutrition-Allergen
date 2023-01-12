@@ -2,7 +2,6 @@ $(document).ready(function(){
     $('select').formSelect();
   });
 
-  
 var submitBtn = document.querySelector("#submitBtn")
 const options = {
 	method: 'GET',
@@ -50,3 +49,4 @@ function checkAllergen(){
 }
 submitBtn.addEventListener('click', handleFormSubmit);
 
+// Attempt to add checkbox
