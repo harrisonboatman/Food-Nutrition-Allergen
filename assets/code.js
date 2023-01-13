@@ -1,8 +1,9 @@
-$(document).ready(function(){
-    $('select').formSelect();
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, options);
   });
 
-var submitBtn = document.getElementById("#submitBtn")
+var submitBtn = document.querySelector("#submitBtn");
 const options = {
 	method: 'GET',
 	headers: {
@@ -45,11 +46,11 @@ console.log(recipeURL)
 }
 
 function checkAllergen(){
-    var allergenEl = document.querySelector('#allergen-input').value;
+    var allergenEl = document.querySelector('#allergen').value;
     console.log(allergenEl);
 
 }
-console.log(submitBtn)
+console.log(submitBtn);
 submitBtn.addEventListener('click', handleFormSubmit);
 
 // Attempt to add checkbox
