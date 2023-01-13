@@ -14,6 +14,7 @@ var instruct2 = document.querySelector('#instruct2');
 var instruct3 = document.querySelector('#instruct3');
 var instruct4 = document.querySelector('#instruct4');
 var instruct5 = document.querySelector('#instruct5');
+var ingred1 = document.querySelector('#ingred1');
 const options = {
     method: 'GET',
     headers: {
@@ -58,6 +59,8 @@ function getRecipes(recipe) {
             for(i=0; i<cardArr.length; i++) {
                 cardArr[i].textContent = recResult[i].title;
                 instructArr[i].textContent = recResult[i].instructions;
+                
+
 
             
             //     for (i=0; i<ingredArray.length; i++ ){
