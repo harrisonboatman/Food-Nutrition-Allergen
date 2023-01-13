@@ -2,7 +2,7 @@ $(document).ready(function(){
     $('select').formSelect();
   });
 
-var submitBtn = document.querySelector("#submitBtn")
+var submitBtn = document.getElementById("#submitBtn")
 const options = {
 	method: 'GET',
 	headers: {
@@ -12,8 +12,8 @@ const options = {
 };
 
 function handleFormSubmit () {
-    var searchEl = document.querySelector('#search-input').value; 
-    var allergenEl = document.querySelector('#allergen-input').value;
+    var searchEl = document.querySelector('#recipe').value; 
+    var allergenEl = document.querySelector('#allergen').value;
     console.log(searchEl);
     console.log(allergenEl);
 
@@ -21,7 +21,7 @@ function handleFormSubmit () {
 }
 
 function getRecipes (recipe) {
-var recipeURL = "https://recipe-by-api-ninjas.p.rapidapi.com/v1/recipe?query=" + recipe + "&offset=10"
+var recipeURL = "https://recipe-by-api-ninjas.p.rapidapi.com/v1/recipe?query=" + recipe + "&offset=4"
 console.log(recipeURL)
 
     fetch(recipeURL, options)
@@ -37,6 +37,8 @@ console.log(recipeURL)
     .then(function(recResult){
         console.log(recResult);
         console.log(recResult[0].ingredients)
+        var ingredArray = recResult[0].ingredients.split("|");
+        console.log(ingredArray);
     })
 
     checkAllergen();
@@ -47,6 +49,7 @@ function checkAllergen(){
     console.log(allergenEl);
 
 }
+console.log(submitBtn)
 submitBtn.addEventListener('click', handleFormSubmit);
 
 // Attempt to add checkbox

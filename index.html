@@ -7,7 +7,6 @@
     <title>Phed Me</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./styles.CSS" />
-    <link rel="stylesheet" href="./assets/code.js" />
 </head>
 
 <body>
@@ -15,7 +14,7 @@
     <div class="phedmebox">
       <h1>Phed Me</h1>
      <input id="recipe" placeholder="Recipe">
-      <select class="browser-default">
+      <select id = "allergen" class="browser-default" type = "text">
       <option value="" disabled selected>Allergies</option>
       <option value="1">Milk</option>
       <option value="2">Eggs</option>
@@ -23,7 +22,7 @@
       <option value="4">Peanuts</option>
      <option value="5">Wheat</option>
    </select>
-   <button class=“submitBtn”>Submit</button>
+   <button id=“submitBtn” class = 'btn btn-info'>Submit</button>
   </div>
 </div>
 
@@ -46,15 +45,14 @@
   </div>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="./assets/code.js"></script>
+    
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/code.js"></script>
             
 </body>
