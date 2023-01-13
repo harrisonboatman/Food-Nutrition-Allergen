@@ -6,12 +6,15 @@
 
 
 .phedmebox {
-    margin:  150px  300px 20px;
+    margin:  50px  25% 20px;
     width: 500px;
     border: 3px solid cadetblue;
-    flex: 1 0 200px;
+    flex: 1 0 50%;
     padding: 10px;
     text-align: center;
     justify-content: center;
 
+}
+
+.submitBtn {
 }
