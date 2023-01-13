@@ -4,6 +4,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 var submitBtn = document.querySelector("#submitBtn");
+var card1 = document.querySelector("#card1");
+var card2 = document.querySelector("#card2");
+var card3 = document.querySelector("#card3");
+var card4 = document.querySelector("#card4");
+var card5 = document.querySelector("#card5");
 const options = {
     method: 'GET',
     headers: {
@@ -23,6 +28,9 @@ function handleFormSubmit() {
 
 function getRecipes(recipe) {
     var recipeURL = "https://recipe-by-api-ninjas.p.rapidapi.com/v1/recipe?query=" + recipe + "&offset=4"
+    var allergenEl = document.querySelector('#allergen').value;
+    var cardArr = [card1, card2, card3, card4, card5]
+    var allergyAlert = document.querySelector('#card')
     console.log(recipeURL)
 
     fetch(recipeURL, options)
@@ -41,10 +49,15 @@ function getRecipes(recipe) {
             var ingredArray = recResult[0].ingredients.split("|");
             console.log(ingredArray);
             console.log(ingredArray.length)
+            for(i=0; i<cardArr.length; i++) {
+                cardArr[i].textContent;
+            }
+
+
             for (i=0; i<ingredArray.length; i++ ){
-                console.log(ingredArray[i].includes("ham"))
-                if (ingredArray[i].includes("ham")){
-                    
+                console.log(ingredArray[i].includes(allergenEl))
+                if (ingredArray[i].includes(allergenEl)){
+                    allergyAlert.classList.add("red-text")
                     break;
                 }
             }
@@ -60,5 +73,7 @@ function checkAllergen() {
 }
 console.log(submitBtn);
 submitBtn.addEventListener('click', handleFormSubmit);
+
+
 
 // Attempt to add checkbox
