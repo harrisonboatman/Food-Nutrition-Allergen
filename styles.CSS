@@ -1,13 +1,17 @@
 .phedmebox {
-    margin:  150px  300px 20px;
+  margin: auto;
     width: 500px;
     border: 3px solid cadetblue;
-    flex: 1 0 200px;
+    flex: 1 0 0;
     padding: 10px;
     text-align: center;
-    justify-content: center;
+   
+}
+.container {
+    justify-content:center;
 }
 
-.cards-container {
-    
+
+
+.submitBtn {
 }
