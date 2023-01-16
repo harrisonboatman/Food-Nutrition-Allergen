@@ -34,7 +34,11 @@ img {
     height: 180px;
 }
 
-.allergen {
-    color:red;
-    text-decoration-color: red;
+#warning1, #warning2, #warning3, #warning4, #warning5 {
+    color: red;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    
 }
