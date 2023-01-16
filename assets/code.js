@@ -1,8 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var elems = document.querySelectorAll('select');
-    var instances = M.FormSelect.init(elems, options);
-});
-
 var submitBtn = document.querySelector("#submitBtn");
 var card1 = document.querySelector("#card1");
 var card2 = document.querySelector("#card2");

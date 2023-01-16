@@ -10,10 +10,12 @@
     flex: 1 0 0;
     padding: 10px;
     text-align: center;
+    padding-bottom: 4%;
    
 }
+
 .container {
-    justify-content:center;
+    padding: 2%;
 }
 
 nav {
@@ -41,4 +43,14 @@ img {
     text-align: center;
     text-transform: uppercase;
     
+}
+
+.card {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 5% 10%;
+    
+}
+.card-3-row {
+    margin: 5% 17%;
 }
