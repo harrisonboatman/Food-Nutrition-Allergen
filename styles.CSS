@@ -10,10 +10,12 @@
     flex: 1 0 0;
     padding: 10px;
     text-align: center;
+    padding-bottom: 4%;
    
 }
+
 .container {
-    justify-content:center;
+    padding: 2%;
 }
 
 nav {
@@ -34,7 +36,21 @@ img {
     height: 180px;
 }
 
-.allergen {
-    color:red;
-    text-decoration-color: red;
+#warning1, #warning2, #warning3, #warning4, #warning5 {
+    color: red;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+.card {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 5% 10%;
+    
+}
+.card-3-row {
+    margin: 5% 17%;
 }

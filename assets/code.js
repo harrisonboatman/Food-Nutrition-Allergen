@@ -1,8 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var elems = document.querySelectorAll('select');
-    var instances = M.FormSelect.init(elems, options);
-});
-
 var submitBtn = document.querySelector("#submitBtn");
 var card1 = document.querySelector("#card1");
 var card2 = document.querySelector("#card2");
@@ -34,11 +29,12 @@ function handleFormSubmit() {
 
 function getRecipes(recipe) {
     var recipeURL = "https://recipe-by-api-ninjas.p.rapidapi.com/v1/recipe?query=" + recipe + "&offset=4"
-    var allergenEl = document.querySelector('#allergen').value;
+    var allergenEl = document.querySelector('#allergen').value.toLowerCase();
     var cardArr = [card1, card2, card3, card4, card5]
     var instructArr = [instruct1, instruct2, instruct3, instruct4, instruct5];
     var allergyAlert = document.querySelector('#card')
     console.log(recipeURL)
+    console.log(allergenEl)
 
     fetch(recipeURL, options)
         .then(function (response) {
@@ -59,25 +55,39 @@ function getRecipes(recipe) {
             for(i=0; i<cardArr.length; i++) {
                 cardArr[i].textContent = recResult[i].title;
                 instructArr[i].textContent = recResult[i].instructions;
-                
 
+                for (let i = 0;  i < recResult.length; i++) {
+                    const ingredientList = recResult[i].ingredients;
+                    console.log(ingredientList)
 
-            
-            //     for (i=0; i<ingredArray.length; i++ ){
-            //     console.log(ingredArray[i].includes(allergenEl))
-            //     if (ingredArray[i].includes(allergenEl)){
-            //         allergyAlert.classList.add("red-text")
-            //         break;
-            //     }
-            // }
-            
-            }
+                    var containsAllergen = ingredientList.includes(allergenEl)
+                console.log(containsAllergen)
+               
+                var warning1 = document.getElementById('warning1')
+                var warning2 = document.getElementById('warning2')
+                var warning3 = document.getElementById('warning3')
+                var warning4 = document.getElementById('warning4')
+                var warning5 = document.getElementById('warning5')
 
-
-            
+                    if(containsAllergen === true) {
+                        warning1.style.display = 'block'
+                        warning2.style.display = 'block'
+                        warning3.style.display = 'block'
+                        warning4.style.display = 'block'
+                        warning5.style.display = 'block'
+                    } else {
+                        warning1.style.display = 'none'
+                        warning2.style.display = 'none'
+                        warning3.style.display = 'none'
+                        warning4.style.display = 'none'
+                        warning5.style.display = 'none'
+                    }
+                }            
+            }            
         })
 
     checkAllergen();
+
 }
 
 function checkAllergen() {
