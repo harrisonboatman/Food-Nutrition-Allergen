@@ -2,9 +2,27 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+
 }
+
+.carousel {
+    height: max-content;
+    width: 100%;
+    overflow: visible;
+    padding-bottom: 10%;
+}
+
+img {
+    height: 700px;
+    width: 100vw;
+
+}
+
 .phedmebox {
-  margin: auto;
+    position: relative;
+    top: 650px;
+    margin: auto;
+    height: 50%;
     width: 500px;
     border: 3px solid cadetblue;
     flex: 1 0 0;
@@ -18,6 +36,20 @@
     padding: 2%;
 }
 
+.logo {
+    font-size: 42px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: navy;
+    text-align: center;
+    position: relative;
+    top: -5px;
+    margin-left: 3rem;
+}
+
+#me {
+    color: #ff8c00;
+}
+
 nav {
     background-color: cadetblue;
 
@@ -27,14 +59,16 @@ nav ul {
     float: right;
     margin-right: 15px;
     text-transform: uppercase;
+    position: relative;
+    top: -5px;
 }
-img {
+/* img {
     position: relative;
     top: -40px;
     left: 0px;
     width: 180px;
     height: 180px;
-}
+} */
 
 #warning1, #warning2, #warning3, #warning4, #warning5 {
     color: red;
@@ -45,6 +79,9 @@ img {
     
 }
 
+.card-container {
+    padding-top: 50%;
+}
 .card {
     display: grid;
     grid-template-columns: auto;
@@ -54,3 +91,8 @@ img {
 .card-3-row {
     margin: 5% 17%;
 }
+
+/* .carousel {
+    height:  500px;
+    
+} */

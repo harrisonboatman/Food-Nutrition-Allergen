@@ -49,12 +49,13 @@ function getRecipes(recipe) {
         .then(function (recResult) {
             console.log(recResult);
             console.log(recResult[0].ingredients)
-            var ingredArray = recResult[0].ingredients.split("|");
-            console.log(ingredArray);
-            console.log(ingredArray.length)
             for(i=0; i<cardArr.length; i++) {
                 cardArr[i].textContent = recResult[i].title;
                 instructArr[i].textContent = recResult[i].instructions;
+                var ingredArray = recResult[i].ingredients.split("|");
+                console.log(ingredArray);
+                console.log(ingredArray.length)
+
 
                 for (let i = 0;  i < recResult.length; i++) {
                     const ingredientList = recResult[i].ingredients;
@@ -93,7 +94,7 @@ function getRecipes(recipe) {
 }
 
 function showIngredients(modalId, ingredientList) {
-
+console.log(ingredientList)
     var ingredientHtml = '';
 
     for (var i=0; i<ingredientList.length; i++){
@@ -113,6 +114,8 @@ function showIngredients(modalId, ingredientList) {
     modalEl.innerHTML = html
 
 }
+
+// function showNutrition(nutrModalID, ) 
 
 function checkAllergen() {
     var allergenEl = document.querySelector('#allergen').value;
