@@ -87,7 +87,7 @@ function getRecipes(recipe) {
 
                 showIngredients(`modal${i}`,ingredArray)
             }            
-        })
+        }).then (displayCards)
 
     checkAllergen();
 
