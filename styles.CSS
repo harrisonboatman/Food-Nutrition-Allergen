@@ -39,7 +39,6 @@ img {
     flex: 1 0 0;
     padding: 10px;
     text-align: center;
-    padding-bottom: 4%;
     background-color: cadetblue;
    border-radius: 8px;
 }
@@ -58,7 +57,7 @@ color: #ff8c00;
 }
 
 .cards-container {
-   margin-top: 47%;
+    margin-top: 47%;
 }
 
 #recipe {
@@ -67,9 +66,11 @@ color: #ff8c00;
     padding-left: 10px;
     width: 464px;
 }
+
 #recipe::placeholder{
     color: black;
 }
+
 #allergen{
     background-color: #e5e5e5;
 }
@@ -105,13 +106,7 @@ nav ul {
     position: relative;
     top: -5px;
 }
-/* img {
-    position: relative;
-    top: -40px;
-    left: 0px;
-    width: 180px;
-    height: 180px;
-} */
+
 
 #warning1, #warning2, #warning3, #warning4, #warning5 {
     color: red;
@@ -137,11 +132,3 @@ nav ul {
     margin: 5% 17%;
 }
 
-/* .carousel {
-    height:  500px;
-    
-} */
-
-/* #submitBtn {
-    opacity: 1s ease-out;
-} */
