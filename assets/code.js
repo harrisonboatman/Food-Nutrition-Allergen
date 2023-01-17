@@ -10,6 +10,11 @@ var instruct3 = document.querySelector('#instruct3');
 var instruct4 = document.querySelector('#instruct4');
 var instruct5 = document.querySelector('#instruct5');
 var ingred1 = document.querySelector('#ingred1');
+var nutr0 = document.querySelector('#nutrContent0');
+var nutr1 = document.querySelector('#nutrContent1');
+var nutr2 = document.querySelector('#nutrContent2');
+var nutr3 = document.querySelector('#nutrContent3');
+var nutr4 = document.querySelector('#nutrContent4');
 const options = {
     method: 'GET',
     headers: {
@@ -86,10 +91,11 @@ function getRecipes(recipe) {
                 }         
 
                 showIngredients(`modal${i}`,ingredArray)
+                checkNutrition(recipe, `nutrModal${i}`);
             }            
         }).then (displayCards)
 
-    checkNutrition(recipe);
+    
 
 }
 
@@ -112,12 +118,11 @@ console.log(ingredientList)
     var modalEl = document.getElementById(modalId)
 
     modalEl.innerHTML = html
-
 }
 
-// function showNutrition(nutrModalID, ) 
 
-function checkNutrition(recipe) {
+
+function checkNutrition(recipe, modalID) {
     var nutrURL = 'https://edamam-food-and-grocery-database.p.rapidapi.com/parser?ingr=' + recipe;
     console.log(nutrURL)
     const options = {
@@ -139,7 +144,29 @@ function checkNutrition(recipe) {
         .then(function (Nutrit){
             console.log(Nutrit)
             console.log(Nutrit.hints[0].food.nutrients);
+            var nutrHTML = ''
+            console.log(Nutrit.hints.length)
+            var nutrArr = [nutr0, nutr1, nutr2, nutr3, nutr4];
+            for( i=0; i<5; i++){
+                var nutrString = JSON.stringify(Nutrit.hints[i].food.nutrients);
+            var nutrSplit = nutrString.split(',');
+            nutrHTML += `<li>${nutrSplit[i]}</li>`
+
+            }
+            var html = `   
+            <div class="modal-content">
+                <h4>Ingredients</h4>
+                <ul>
+                ${nutrHTML}
+                </ul>
+            </div>`
+            console.log(html)
+
+            var modalEle = document.getElementById(modalID)
+            modalEle.innerHTML = html
         })
+        
+
 }
 console.log(submitBtn);
 submitBtn.addEventListener('click', handleFormSubmit);
