@@ -22,18 +22,46 @@ img {
     position: relative;
     top: 650px;
     margin: auto;
-    height: 50%;
+    height: 370px;
     width: 500px;
     border: 3px solid cadetblue;
     flex: 1 0 0;
     padding: 10px;
     text-align: center;
     padding-bottom: 4%;
-   
+    background-color: cadetblue;
+   border-radius: 8px;
 }
 
+.boxName {
+    margin-left: 120px;
+    display: flex;
+}
+.phed {
+color: navy;
+}
+.me{
+color: #ff8c00;
+}
 .container {
     padding: 2%;
+}
+#recipe {
+    background-color: #e5e5e5;
+    border-radius: 2.5px;
+    padding-left: 10px;
+    width: 464px;
+}
+#recipe::placeholder{
+    color: black;
+}
+#allergen{
+    background-color: #e5e5e5;
+}
+
+#submitBtn {
+    margin-top: 20px;
+    width: 200px;
 }
 
 .logo {
@@ -81,11 +109,13 @@ nav ul {
 
 .card-container {
     padding-top: 50%;
+
 }
 .card {
     display: grid;
     grid-template-columns: auto;
     margin: 5% 10%;
+    border-radius: 8px;
     
 }
 .card-3-row {
