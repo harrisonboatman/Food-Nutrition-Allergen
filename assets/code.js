@@ -115,7 +115,7 @@ console.log(ingredientList)
 
 }
 
-// function showNutrition(nutrModalID, )
+// function showNutrition(nutrModalID, ) 
 
 function checkAllergen() {
     var allergenEl = document.querySelector('#allergen').value;
