@@ -127,5 +127,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Modal.init(elems, options);
   });
 
-
 // Attempt to add checkbox
+
+function displayCards() {
+    var T = document.getElementById("displayClick");
+    T.style.display = "block";
+}
