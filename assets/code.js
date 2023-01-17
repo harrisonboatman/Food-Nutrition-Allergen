@@ -128,3 +128,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 // Attempt to add checkbox
+
+function displayCards() {
+    var T = document.getElementById("displayClick");
+    T.style.display = "block";
+}
