@@ -82,11 +82,35 @@ function getRecipes(recipe) {
                         warning4.style.display = 'none'
                         warning5.style.display = 'none'
                     }
-                }            
+                }         
+
+                showIngredients(`modal${i}`,ingredArray)
             }            
         })
 
     checkAllergen();
+
+}
+
+function showIngredients(modalId, ingredientList) {
+
+    var ingredientHtml = '';
+
+    for (var i=0; i<ingredientList.length; i++){
+        ingredientHtml += `<li>${ingredientList[i]}</li>`
+    }
+
+    var html = `   
+    <div class="modal-content">
+        <h4>Ingredients</h4>
+        <ul>
+        ${ingredientHtml}
+        </ul>
+    </div>`
+
+    var modalEl = document.getElementById(modalId)
+
+    modalEl.innerHTML = html
 
 }
 
@@ -98,6 +122,10 @@ function checkAllergen() {
 console.log(submitBtn);
 submitBtn.addEventListener('click', handleFormSubmit);
 
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems, options);
+  });
 
 
 // Attempt to add checkbox
