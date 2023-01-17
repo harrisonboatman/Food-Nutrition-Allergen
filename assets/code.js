@@ -87,9 +87,9 @@ function getRecipes(recipe) {
 
                 showIngredients(`modal${i}`,ingredArray)
             }            
-        })
+        }).then (displayCards)
 
-    checkAllergen();
+    checkNutrition(recipe);
 
 }
 
@@ -117,10 +117,29 @@ console.log(ingredientList)
 
 // function showNutrition(nutrModalID, ) 
 
-function checkAllergen() {
-    var allergenEl = document.querySelector('#allergen').value;
-    console.log(allergenEl);
-
+function checkNutrition(recipe) {
+    var nutrURL = 'https://edamam-food-and-grocery-database.p.rapidapi.com/parser?ingr=' + recipe;
+    console.log(nutrURL)
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'f22fe07855mshbcbd682b9e3da6ap1cac5ajsn940b652f81a9',
+            'X-RapidAPI-Host': 'edamam-food-and-grocery-database.p.rapidapi.com'
+        }
+    };
+    fetch(nutrURL, options)
+    .then(function (response){
+        if (!response.ok){
+            console.error("YOU MESSED UP")
+        } else {
+            console.log(response)
+            return response.json()
+        }
+    })
+        .then(function (Nutrit){
+            console.log(Nutrit)
+            console.log(Nutrit.hints[0].food.nutrients);
+        })
 }
 console.log(submitBtn);
 submitBtn.addEventListener('click', handleFormSubmit);
