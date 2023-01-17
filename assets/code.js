@@ -151,6 +151,7 @@ function checkNutrition(recipe, modalID) {
                 var nutrString = JSON.stringify(Nutrit.hints[i].food.nutrients);
             var nutrSplit = nutrString.split(',');
             nutrHTML += `<li>${nutrSplit[i]}</li>`
+            console.log(nutrHTML)
 
             }
             var html = `   
