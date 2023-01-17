@@ -10,30 +10,74 @@
     width: 100%;
     overflow: visible;
     padding-bottom: 10%;
+
 }
+
 
 img {
     height: 700px;
     width: 100vw;
+    visibility: visible;
 
+}
+
+.carousel .carousel-item {
+    visibility: visible;
+}
+
+.carousel-item {
+    visibility: visible;
 }
 
 .phedmebox {
     position: relative;
     top: 650px;
     margin: auto;
-    height: 50%;
+    height: 370px;
     width: 500px;
     border: 3px solid cadetblue;
     flex: 1 0 0;
     padding: 10px;
     text-align: center;
-    padding-bottom: 4%;
-   
+    background-color: cadetblue;
+   border-radius: 8px;
 }
 
-.container {
-    padding: 2%;
+.boxName {
+    margin-left: 120px;
+    display: flex;
+}
+
+.phed {
+color: navy;
+}
+
+.me{
+color: #ff8c00;
+}
+
+.cards-container {
+    margin-top: 47%;
+}
+
+#recipe {
+    background-color: #e5e5e5;
+    border-radius: 2.5px;
+    padding-left: 10px;
+    width: 464px;
+}
+
+#recipe::placeholder{
+    color: black;
+}
+
+#allergen{
+    background-color: #e5e5e5;
+}
+
+#submitBtn {
+    margin-top: 20px;
+    width: 200px;
 }
 
 .logo {
@@ -62,13 +106,7 @@ nav ul {
     position: relative;
     top: -5px;
 }
-/* img {
-    position: relative;
-    top: -40px;
-    left: 0px;
-    width: 180px;
-    height: 180px;
-} */
+
 
 #warning1, #warning2, #warning3, #warning4, #warning5 {
     color: red;
@@ -81,18 +119,16 @@ nav ul {
 
 .card-container {
     padding-top: 50%;
+
 }
 .card {
     display: grid;
     grid-template-columns: auto;
     margin: 5% 10%;
+    border-radius: 8px;
     
 }
 .card-3-row {
     margin: 5% 17%;
 }
 
-/* .carousel {
-    height:  500px;
-    
-} */
