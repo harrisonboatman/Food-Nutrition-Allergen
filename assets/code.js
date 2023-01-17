@@ -87,8 +87,9 @@ function getRecipes(recipe) {
 
                 showIngredients(`modal${i}`,ingredArray)
             }            
-        })
-        checkNutrition(recipe);
+        }).then (displayCards)
+
+    checkNutrition(recipe);
 
 }
 
