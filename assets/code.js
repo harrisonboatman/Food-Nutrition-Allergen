@@ -89,5 +89,4 @@ console.log(submitBtn);
 submitBtn.addEventListener('click', handleFormSubmit);
 
 
-
 // Attempt to add checkbox
