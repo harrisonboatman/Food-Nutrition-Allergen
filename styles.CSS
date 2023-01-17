@@ -10,12 +10,23 @@
     width: 100%;
     overflow: visible;
     padding-bottom: 10%;
+
 }
+
 
 img {
     height: 700px;
     width: 100vw;
+    visibility: visible;
 
+}
+
+.carousel .carousel-item {
+    visibility: visible;
+}
+
+.carousel-item {
+    visibility: visible;
 }
 
 .phedmebox {
@@ -97,6 +108,6 @@ nav ul {
     
 } */
 
-#submitBtn {
+/* #submitBtn {
     opacity: 1s ease-out;
-}
+} */
