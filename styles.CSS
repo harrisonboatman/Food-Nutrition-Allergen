@@ -37,15 +37,19 @@ img {
     margin-left: 120px;
     display: flex;
 }
+
 .phed {
 color: navy;
 }
+
 .me{
 color: #ff8c00;
 }
-.container {
-    padding: 2%;
+
+.cards-container {
+   margin-top: 47%;
 }
+
 #recipe {
     background-color: #e5e5e5;
     border-radius: 2.5px;
