@@ -144,17 +144,17 @@ function checkNutrition(recipe) {
 console.log(submitBtn);
 submitBtn.addEventListener('click', handleFormSubmit);
 
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.modal');
-    var instances = M.Modal.init(elems, options);
-  });
 
-// Attempt to add checkbox
 
 function displayCards() {
     var T = document.getElementById("displayClick");
     T.style.display = "block";
-}
+
+
+} 
+
+document.addEventListener('DOMContentLoaded', function() {    var elems = document.querySelectorAll('.modal');    var instances = M.Modal.init(elems, options);  });
+
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.carousel');
