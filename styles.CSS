@@ -5,6 +5,10 @@
 
 }
 
+body {
+    background-color: #0E2433;
+}
+
 .carousel {
     height: max-content;
     width: 100%;
