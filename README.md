@@ -34,3 +34,7 @@ After discussing what would be useful when making a recipe searching website, we
 ## License
 
 This program was developed under the MIT license. Reference the LICENSE.md file for licensing information.
+
+## Link to Program
+
+Here is the link for the [Application](https://harrisonboatman.github.io/Food-Nutrition-Allergen/)
