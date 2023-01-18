@@ -1,5 +1,8 @@
 # Food-Nutrition-Allergen
 
+
+![Screenshot](https://files.slack.com/files-pri/T04A0KNTAE8-F04KJ40T9HA/screen_shot_2023-01-18_at_8.59.40_am_2.png)
+
 ## Built With 
 
 Materialize - CSS Library
