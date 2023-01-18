@@ -1,7 +1,13 @@
 # Food-Nutrition-Allergen
 
+Here is the attached screenshot for our page upon loading the program.
+[Screenshot1](https://files.slack.com/files-pri/T04A0KNTAE8-F04KJ39RKK6/screen_shot_2023-01-18_at_8.56.29_am__2_.png)
 
-![Screenshot](https://files.slack.com/files-pri/T04A0KNTAE8-F04KJ40T9HA/screen_shot_2023-01-18_at_8.59.40_am_2.png)
+Here is the screenshot for how the program looks after the initial search criteria has been met.
+[Screenshot2](https://files.slack.com/files-tmb/T04A0KNTAE8-F04KJ3N6TRA-28bbfb1629/screen_shot_2023-01-18_at_8.58.35_am_2_720.png)
+
+Here is the screenshot showing the functionality of the modals.
+[Screenshot3](https://files.slack.com/files-pri/T04A0KNTAE8-F04KJ40T9HA/screen_shot_2023-01-18_at_8.59.40_am_2.png)
 
 ## Built With 
 
