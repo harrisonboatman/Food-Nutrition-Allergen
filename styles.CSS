@@ -2,36 +2,35 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    
 
+}
+
+body {
+    background-color: #0e2433;
 }
 
 .carousel {
-    height: max-content;
-    width: 100%;
+    
+display: flex;
+    max-width: 100%;
     overflow: visible;
-    padding-bottom: 10%;
-
+    padding-bottom: 5%;
+    
+    
 }
 
 
-img {
-    height: 700px;
-    width: 100vw;
+ .carousel .carousel-item img {
     visibility: visible;
+    height: 700px; 
+    width: 100%;
+ }
 
-}
-
-.carousel .carousel-item {
-    visibility: visible;
-}
-
-.carousel-item {
-    visibility: visible;
-}
 
 .phedmebox {
     position: relative;
-    top: 650px;
+    top: 450px;
     margin: auto;
     height: 370px;
     width: 500px;
@@ -41,6 +40,7 @@ img {
     text-align: center;
     background-color: cadetblue;
    border-radius: 8px;
+   
 }
 
 .boxName {
@@ -57,7 +57,8 @@ color: #ff8c00;
 }
 
 .cards-container {
-    margin-top: 47%;
+    margin-top: 40%;
+    max-height: 400px;
 }
 
 #recipe {
@@ -87,7 +88,7 @@ color: #ff8c00;
     text-align: center;
     position: relative;
     top: -5px;
-    margin-left: 3rem;
+    margin-left: 15px;
 }
 
 #me {
